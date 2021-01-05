@@ -84,7 +84,7 @@ extension ViewController: WKURLSchemeHandler {
     func webView(_ webView: WKWebView, start urlSchemeTask: WKURLSchemeTask) {
         print("start urlSchemeTask: \(urlSchemeTask.request)")
         
-        let urlString = urlSchemeTask.request.url!.absoluteString.replacingOccurrences(of: "scb://", with: "https://")
+        let urlString = urlSchemeTask.request.url!.absoluteString.replacingOccurrences(of: "scb://", with: "http://")
 //        let urlString = urlSchemeTask.request.url!.absoluteString
         let request = URLRequest(url: URL(string: urlString)!, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 5)
         
